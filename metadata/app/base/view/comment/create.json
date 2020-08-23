@@ -1,0 +1,19 @@
+{
+  "label": "Create",
+  "description": "Comment creation view",
+  "readOnly": false,
+  "attrs": [
+    {
+      "name": "text",
+      "orderNumber": 10
+    },
+    {
+      "name": "toast",
+      "orderNumber": 20
+    },
+    {
+      "name": "author",
+      "orderNumber": 30
+    }
+  ]
+}

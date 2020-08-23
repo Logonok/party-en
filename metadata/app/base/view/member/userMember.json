@@ -1,0 +1,18 @@
+{
+  "label": "My member",
+  "description": "Member associated with the current system user",
+  "filter": {
+    "user": "$user"
+  },
+  "readOnly": false,
+  "attrs": [
+    {
+      "name": "name",
+      "orderNumber": 10
+    },
+    {
+      "name": "user",
+      "orderNumber": 20
+    }
+  ]
+}

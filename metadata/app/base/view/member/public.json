@@ -1,0 +1,11 @@
+{
+  "label": "Public members",
+  "description": "Member view for guest access",
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "name",
+      "orderNumber": 20
+    }
+  ]
+}

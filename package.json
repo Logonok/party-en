@@ -1,26 +1,26 @@
 {
-  "name": "evado-app-boilerplate",
-  "version": "1.7.1",
-  "description": "Evado Boilerplate Application",
-  "author": "Maxim Khorin",
+  "name": "logonok-party-ru",
+  "version": "1.0.0",
+  "description": "Evado Framework Application",
+  "author": "Logonok",
   "license": "MIT",
   "engines": {
     "node": ">=12.16.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mkhorin/evado-app-boilerplate.git"
+    "url": "https://github.com/logonok/logonok-party-ru.git"
   },
   "dependencies": {
-    "evado": "~1.7.1",
-    "evado-api-base": "~1.7.1",
+    "evado": "~1.7.0",
+    "evado-api-base": "~1.7.0",
     "evado-api-navigation": "~1.6.0",
-    "evado-meta-base": "~1.7.1",
+    "evado-meta-base": "~1.7.0",
     "evado-meta-navigation": "~1.6.0",
     "evado-module-account": "~1.6.0",
-    "evado-module-admin": "~1.7.1",
-    "evado-module-office": "~1.7.1",
-    "evado-module-studio": "~1.7.1",
+    "evado-module-admin": "~1.7.0",
+    "evado-module-office": "~1.7.0",
+    "evado-module-studio": "~1.7.0",
     "sharp": "0.24.1"
   },
   "scripts": {

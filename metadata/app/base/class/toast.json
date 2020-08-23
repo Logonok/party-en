@@ -1,0 +1,148 @@
+{
+  "abstract": false,
+  "description": "Member generated content",
+  "label": "Toast",
+  "header": ".title",
+  "attrs": [
+    {
+      "name": "title",
+      "label": "Title",
+      "type": "string",
+      "commonSearchable": true,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 10,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": true,
+      "selectSearchable": true,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "content",
+      "label": "Content",
+      "type": "text",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 20,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": false,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "author",
+      "label": "Author",
+      "type": "ref",
+      "viewType": "relationSelect",
+      "commands": [
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "defaultValue": "$user.meta.base.member",
+      "eagerLoading": true,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": false,
+      "onDelete": "null",
+      "orderNumber": 30,
+      "sortable": false,
+      "sortableRelation": false,
+      "refClass": "member",
+      "readOnly": true,
+      "required": true,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "access",
+      "label": "Access",
+      "type": "string",
+      "viewType": "radioList",
+      "description": "Sets accessibility of the toast to other members",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "defaultValue": "none",
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 40,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": true,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false,
+      "enums": [
+        {
+          "items": [
+            {
+              "value": "none",
+              "text": "None",
+              "hint": "Nobody except author",
+              "orderNumber": 10
+            },
+            {
+              "value": "friends",
+              "text": "Friends",
+              "hint": "Only for friends",
+              "orderNumber": 20
+            },
+            {
+              "value": "all",
+              "text": "All",
+              "hint": "For all members",
+              "orderNumber": 30
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "comments",
+      "label": "Comments",
+      "type": "backref",
+      "commands": [
+        "create",
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": true,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": true,
+      "orderNumber": 50,
+      "sortable": false,
+      "sortableRelation": false,
+      "refAttr": "toast",
+      "refClass": "comment",
+      "readOnly": false,
+      "required": false,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false
+    }
+  ]
+}

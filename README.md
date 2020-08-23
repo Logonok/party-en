@@ -1,9 +1,8 @@
-# Evado Boilerplate App
+# Evado Party App
 
-Lightweight and feature-rich template for rapid building web applications.
+Social network demo web application created on the Evado framework.
 
-- [Evado Framework](https://github.com/mkhorin/evado)
-- [Step-by-step tutorial](http://nervebit.com)
+- [Evado Declarative Framework](https://github.com/mkhorin/evado)
 
 ## Installation
 
@@ -43,11 +42,15 @@ set NODE_ENV=development
 node console/start
 ```
  
-http://localhost:3000
+Web interface: **http://localhost:3000**
+
+Login as administrator:
 ```sh
 Email: a@a.a
 Password: 123456
 ```
-
-## Tutorial
-- [Build App Without Coding](http://nervebit.com)
+Login as member:
+```sh
+Email: b@b.b
+Password: 123456
+```

@@ -1,0 +1,32 @@
+{
+  "label": "Edit",
+  "description": "Object editing view",
+  "readOnly": false,
+  "attrs": [
+    {
+      "name": "user",
+      "orderNumber": 10,
+      "readOnly": true
+    },
+    {
+      "name": "name",
+      "orderNumber": 20
+    },
+    {
+      "name": "toasts",
+      "orderNumber": 30
+    },
+    {
+      "name": "inviters",
+      "orderNumber": 40
+    },
+    {
+      "name": "invitees",
+      "orderNumber": 50
+    },
+    {
+      "name": "friends",
+      "orderNumber": 60
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "abstract": false,
+  "description": "Defines the state of friendship between members",
+  "label": "Friend",
+  "attrs": [
+    {
+      "name": "_state",
+      "label": "State",
+      "type": "string",
+      "viewType": "state",
+      "description": "Object state system attribute",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 10,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": true,
+      "required": false,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "inviter",
+      "label": "Inviter",
+      "type": "ref",
+      "viewType": "relationSelect",
+      "description": "Member inviting to be friends. By default whoever creates a friend",
+      "commands": [
+        "add",
+        "remove",
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "defaultValue": "$user.meta.base.member",
+      "eagerLoading": true,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": false,
+      "onDelete": "null",
+      "orderNumber": 20,
+      "sortable": false,
+      "sortableRelation": false,
+      "refClass": "member",
+      "readOnly": true,
+      "required": true,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "invitee",
+      "label": "Invitee",
+      "type": "ref",
+      "viewType": "relationSelect",
+      "description": "Member invited to be friends",
+      "commands": [
+        "add",
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": true,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": false,
+      "onDelete": "null",
+      "orderNumber": 30,
+      "sortable": false,
+      "sortableRelation": false,
+      "refClass": "member",
+      "readOnly": false,
+      "required": true,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false,
+      "rules": [
+        {
+          "type": "condition",
+          "orderNumber": 20,
+          "description": "Invitee must not be an inviter",
+          "message": "Invitee must not be an inviter",
+          "condition": [
+            "$!=",
+            ".inviter",
+            ".invitee"
+          ]
+        },
+        {
+          "type": "custom",
+          "orderNumber": 30,
+          "description": "Check member invitation",
+          "config": {
+            "Class": "component/meta/validator/FriendValidator",
+            "message": "Friend already exists"
+          }
+        }
+      ]
+    }
+  ],
+  "states": [
+    {
+      "name": "pending",
+      "label": "Pending",
+      "defaults": true,
+      "description": "Waiting for the decision of the invited member. Default state after object creation",
+      "readOnly": true
+    },
+    {
+      "name": "accepted",
+      "label": "Accepted",
+      "defaults": false,
+      "description": "Friendship is accepted by invited member",
+      "readOnly": true
+    },
+    {
+      "name": "declined",
+      "label": "Declined",
+      "defaults": false,
+      "description": "Friendship rejected by invited member",
+      "readOnly": true
+    }
+  ],
+  "transitions": [
+    {
+      "name": "accept",
+      "label": "Accept friendship",
+      "description": "The invitee accepts friendship from the inviting member",
+      "nullStartState": false,
+      "startStates": [
+        "pending",
+        "declined"
+      ],
+      "finalState": "accepted",
+      "orderNumber": 10
+    },
+    {
+      "name": "decline",
+      "label": "Reject friendship",
+      "description": "The invitee declines friendship from the inviting member",
+      "nullStartState": false,
+      "startStates": [
+        "pending",
+        "accepted"
+      ],
+      "finalState": "declined",
+      "orderNumber": 20
+    }
+  ]
+}

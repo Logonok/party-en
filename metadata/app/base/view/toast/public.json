@@ -1,0 +1,24 @@
+{
+  "label": "Public toasts",
+  "description": "Toast view for guest access",
+  "filter": {
+    "access": "all"
+  },
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "title",
+      "orderNumber": 10
+    },
+    {
+      "name": "content",
+      "orderNumber": 20
+    },
+    {
+      "name": "author",
+      "eagerLoading": true,
+      "eagerView": "public",
+      "orderNumber": 30
+    }
+  ]
+}

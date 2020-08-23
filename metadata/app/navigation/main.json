@@ -1,0 +1,25 @@
+{
+  "label": "Sidebar menu",
+  "description": "Main sidebar menu",
+  "nodes": [
+    {
+      "name": "toasts",
+      "label": "Toasts",
+      "orderNumber": 10,
+      "class": "toast"
+    },
+    {
+      "name": "members",
+      "label": "Members",
+      "orderNumber": 20,
+      "class": "member"
+    },
+    {
+      "name": "myMember",
+      "label": "My member",
+      "orderNumber": 30,
+      "class": "member",
+      "view": "userMember"
+    }
+  ]
+}
