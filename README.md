@@ -54,3 +54,14 @@ Login as member:
 Email: b@b.b
 Password: 123456
 ```
+
+## Docker installation
+
+Clone application to /app
+```sh
+cd /app
+docker-compose up -d mongo
+docker-compose up --build installer
+docker-compose up -d server
+```
+Web interface: **http://localhost:3000**
