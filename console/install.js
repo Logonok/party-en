@@ -5,8 +5,8 @@
 
 const Application = require('../Application');
 const Console = require('evado/console/Console');
-const instance = new Console({Application});
 const params = Console.parseProcessArguments();
+const instance = new Console({Application, params});
 
 (async () => {
     try {
@@ -21,6 +21,7 @@ const params = Console.parseProcessArguments();
             await instance.createListeners();
             await instance.importData({oneByOne: false});
             await instance.importStudioData();
+            await instance.createIndexes();
         });
     } catch (err) {
         console.error(err);
