@@ -1,8 +1,8 @@
 'use strict';
-/*
-* Find objects of the Member class via the Friend class link that are in the accepted state
-* Also, exclude the current user member
-* */
+
+// find objects of the Member class via the Friend class link that are in the accepted state
+// also, exclude the current user member
+
 const Base = require('areto/base/Base');
 
 module.exports = class FriendMembers extends Base {

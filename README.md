@@ -1,10 +1,9 @@
-# Evado Party App
+# Evado Party
 
-Social network demo web application created on the Evado framework.
+Social network web application 
+created on [Evado Declarative Framework](https://github.com/mkhorin/evado).
 
-- [Evado Declarative Framework](https://github.com/mkhorin/evado)
-
-## Installation
+## Typical installation
 
 #### Install environment
 - [Node.js](https://nodejs.org)
@@ -16,6 +15,7 @@ Clone application to /app
 cd /app
 npm install
 NODE_ENV=development node console/install
+NODE_ENV=development node console/start
 ```
 
 #### Windows
@@ -25,34 +25,7 @@ cd c:/app
 npm install
 set NODE_ENV=development
 node console/install
-```
-
-## Start app
-
-#### Linux
-```sh
-cd /app
-NODE_ENV=development node console/start
-```
-
-#### Windows
-```sh
-cd c:/app
-set NODE_ENV=development
 node console/start
-```
- 
-Web interface: **http://localhost:3000**
-
-Login as administrator:
-```sh
-Email: a@a.a
-Password: 123456
-```
-Login as member:
-```sh
-Email: b@b.b
-Password: 123456
 ```
 
 ## Docker installation
@@ -64,4 +37,18 @@ docker-compose up -d mongo
 docker-compose up --build installer
 docker-compose up -d server
 ```
+
+## Usage
+
 Web interface: **http://localhost:3000**
+
+Login as party member:
+```sh
+Email: b@b.b
+Password: 123456
+```
+Login as administrator:
+```sh
+Email: a@a.a
+Password: 123456
+```
