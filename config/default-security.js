@@ -153,7 +153,7 @@ module.exports = {
             description: 'Check user is author',
             config: {
                 Class: 'evado/component/meta/rbac/rule/RefUserRule',
-                attr: 'author'
+                refAttr: 'author'
             }
         },
         'comment': {
@@ -168,7 +168,7 @@ module.exports = {
             description: 'Check user binding as object creator',
             config: {
                 Class: 'evado/component/meta/rbac/rule/UserRule',
-                attr: '_creator'
+                userAttr: '_creator'
             }
         },
         'invitee': {
@@ -176,7 +176,7 @@ module.exports = {
             description: 'Check user is invitee',
             config: {
                 Class: 'evado/component/meta/rbac/rule/RefUserRule',
-                attr: 'invitee'
+                refAttr: 'invitee'
             }
         },
         'toast': {
@@ -190,8 +190,7 @@ module.exports = {
             label: 'User',
             description: 'Check user binding',
             config: {
-                Class: 'evado/component/meta/rbac/rule/UserRule',
-                attr: 'user'
+                Class: 'evado/component/meta/rbac/rule/UserRule'
             }
         }
     },
