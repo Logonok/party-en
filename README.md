@@ -3,6 +3,9 @@
 Social network web application 
 created on [Evado Declarative Framework](https://github.com/mkhorin/evado).
 
+A simple social network for chatting guests at a virtual party. 
+Registered users can make friends, propose toasts, discuss and share them with others.
+
 ## Typical installation
 
 #### Install environment
