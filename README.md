@@ -9,7 +9,7 @@ Registered users can make friends, propose toasts, discuss and share them with o
 ## Typical installation
 
 #### Install environment
-- [Node.js](https://nodejs.org) (version 12)
+- [Node.js](https://nodejs.org) (version 14)
 - [MongoDB](https://www.mongodb.com/download-center/community) (version 4)
 
 #### Linux
