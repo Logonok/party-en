@@ -17,7 +17,11 @@ module.exports = {
     params: {
         'enablePasswordChange': false,
         'enableSignUp': false,
-        'static': {options: {maxAge: 60 * 60 * 1000}},
+        'static': {
+            options: {
+                maxAge: 60 * 60 * 1000
+            }
+        },
         'serverAddress': 'http://localhost:3000'
     }
 };
