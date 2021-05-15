@@ -93,9 +93,6 @@ body {
 
 .breadcrumb {
     padding-right: 145px;
-    border-left: 2px solid #3c8dbc;
-    border-radius: 0;
-    background: #eff;
 }
 .breadcrumb + h1 {
     margin-top: 2rem;
@@ -118,7 +115,7 @@ body {
     border-left: 1px solid #ddd;
 }
 .user-toggle:hover {
-    color: var(--primary);
+    color: var(--dark-primary);
 }
 .user-toggle .dropdown-toggle {
     padding: 0 12px;
@@ -185,7 +182,7 @@ body {
     padding: 15px;
     background: #fff;
     overflow: auto;
-    border-bottom: 2px solid var(--primary);
+    border-bottom: 2px solid var(--dark-primary);
     text-align: center;
     height: 235px;
     max-width: 320px;
