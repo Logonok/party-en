@@ -19,7 +19,7 @@ module.exports = {
             type: 'class',
             class: 'member'
         },
-        rule: 'creator'
+        rules: 'creator'
     }, {
         description: 'Manage own toasts',
         roles: 'user',
@@ -29,7 +29,7 @@ module.exports = {
             type: 'class',
             class: 'toast'
         },
-        rule: 'creator'
+        rules: 'creator'
     }, {
         description: 'Read toasts that you have access to',
         roles: 'user',
@@ -39,7 +39,7 @@ module.exports = {
             type: 'class',
             class: 'toast'
         },
-        rule: 'toast'
+        rules: 'toast'
     }, {
         description: 'Manage own comments',
         roles: 'user',
@@ -49,7 +49,7 @@ module.exports = {
             type: 'class',
             class: 'comment'
         },
-        rule: 'creator'
+        rules: 'creator'
     }, {
         description: 'Read and create comments of toasts that you have access to',
         roles: 'user',
@@ -59,7 +59,7 @@ module.exports = {
             type: 'class',
             class: 'comment'
         },
-        rule: 'comment'
+        rules: 'comment'
     }, {
         description: 'Read members and friends',
         roles: 'user',
@@ -78,17 +78,17 @@ module.exports = {
             type: 'class',
             class: 'friend'
         },
-        rule: 'creator'
+        rules: 'creator'
     }, {
         description: 'Change friendship if you are an invited member',
         roles: 'user',
         type: 'allow',
         actions: 'update',
         targets: {
-            type: 'class',
+            type: 'transition',
             class: 'friend'
         },
-        rule: 'invitee'
+        rules: 'invitee'
     }, {
         description: 'Read objects with guest role',
         roles: 'guest',
