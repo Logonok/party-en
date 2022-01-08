@@ -37,18 +37,21 @@ module.exports = class ToastRule extends Base {
         return this.getBaseMeta().getClass('member').find({user}).id();
     }
 
-    async getObjectFilter () { // filter objects in list
+    /**
+     * Filter objects in list
+     */
+    async getObjectFilter () {  
         const friends = await this.getFriendIds();
         const items = await this.getToastIds(friends);
         return items.length
-            ? ['OR', {access: 'all'}, {_id: items}]
+            ? ['or', {access: 'all'}, {_id: items}]
             : {access: 'all'};
     }
 
     async getFriendIds () {
         const memberId = await this.getUserMemberId();
         const friends = await this.getBaseMeta().getClass('friend').findByState('accepted')            
-            .and(['OR', {inviter: memberId}, {invitee: memberId}])
+            .and(['or', {inviter: memberId}, {invitee: memberId}])
             .raw().all();
         const result = [];
         for (const friend of friends) {

@@ -18,14 +18,17 @@ module.exports = class CommentRule extends Base {
         return true;
     }
 
-    async getObjectFilter () { // filter objects in list
+    /**
+     * Filter objects in list
+     */
+    async getObjectFilter () {  
         const friends = await this.getFriendIds();
         const items = await this.getToastIds(friends);
         return items.length ? {toast: items} : null;
     }
 
     getToastIds (friends) {
-        const condition = ['OR', {access: 'all'}];
+        const condition = ['or', {access: 'all'}];
         if (friends.length) {
             condition.push({
                 access: 'friends',
