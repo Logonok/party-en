@@ -13,7 +13,7 @@ Registered users can make friends, propose toasts, discuss and share them with o
 - [MongoDB](https://www.mongodb.com/download-center/community) (version 4)
 
 #### Linux
-Clone application to /app
+Clone application to `/app`
 ```sh
 cd /app
 npm install
@@ -22,7 +22,7 @@ NODE_ENV=development node console/start
 ```
 
 #### Windows
-Clone application to c:/app
+Clone application to `c:/app`
 ```sh
 cd c:/app
 npm install
@@ -33,7 +33,7 @@ node console/start
 
 ## Docker installation
 
-Clone application to /app
+Clone application to `/app`
 ```sh
 cd /app
 docker-compose up -d mongo
