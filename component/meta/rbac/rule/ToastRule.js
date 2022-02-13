@@ -25,7 +25,7 @@ module.exports = class ToastRule extends Base {
     async checkFriendAccess (toast) {
         const member = await this.getUserMemberId();
         const members = [member, toast.get('author')];
-        const query = toast.class.meta.getClass('friend').findByState('accepted').and({            
+        const query = toast.class.meta.getClass('friend').findByState('accepted').and({
             inviter: members,
             invitee: members
         });
@@ -40,7 +40,7 @@ module.exports = class ToastRule extends Base {
     /**
      * Filter objects in list
      */
-    async getObjectFilter () {  
+    async getObjectFilter () {
         const friends = await this.getFriendIds();
         const items = await this.getToastIds(friends);
         return items.length
@@ -50,7 +50,7 @@ module.exports = class ToastRule extends Base {
 
     async getFriendIds () {
         const memberId = await this.getUserMemberId();
-        const friends = await this.getBaseMeta().getClass('friend').findByState('accepted')            
+        const friends = await this.getBaseMeta().getClass('friend').findByState('accepted')
             .and(['or', {inviter: memberId}, {invitee: memberId}])
             .raw().all();
         const result = [];

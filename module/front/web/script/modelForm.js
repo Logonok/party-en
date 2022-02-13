@@ -80,7 +80,7 @@ Vue.component('model-form', {
             });
             return this.metaView
                 ? this.getMetaViewData(this.metaView, data)
-                : data;            
+                : data;
         },
         loadData () {
             return this.id
@@ -107,7 +107,7 @@ Vue.component('model-form', {
                 }
             }
             throw new Error(`Meta view not found: ${name}`);
-        },        
+        },
         build (meta, data) {
             this.metaData = this.prepareClassElements(meta, data);
             this.root = this.rootGroup ? this.getGroup(this.rootGroup) : this.metaData;
