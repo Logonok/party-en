@@ -1,6 +1,6 @@
 {
   "label": "Edit",
-  "description": "Object editing view",
+  "description": "Object edit view",
   "readOnly": false,
   "attrs": [
     {
